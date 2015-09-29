@@ -1,0 +1,11 @@
+argument		::= WORD
+
+goal_address		::= "to" argument
+
+start_address		::= "from" argument
+
+journey			::= goal_address start_address?
+
+command_type		::= journey
+
+command			::= wannago command_type

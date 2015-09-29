@@ -39,4 +39,10 @@ class Config(object):
     def getToken(self):
         return self.getConfig('Navitia', 'Token')
 
+    def setLocation(self, alias, location):
+        return self.setConfig('Locations', alias, location)
+
+    def getLocation(self, alias):
+        return self.getConfig('Locations', alias)
+
 defaultConfig = Config()
